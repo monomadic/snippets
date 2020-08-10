@@ -1,3 +1,8 @@
+/*
+cargo.toml:
+structopt="*"
+*/
+
 use structopt::StructOpt;
 
 #[derive(StructOpt, Debug)]
