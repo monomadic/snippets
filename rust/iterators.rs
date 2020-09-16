@@ -1,7 +1,7 @@
 
 // map with lazy failure
+// collect() will throw errors inside the iterator
 let extracted = videos
-    .map(|x|json_to_video(x))
-    .take_while(|x|x.is_ok())
-    .map(|x|x.ok().unwrap())
+    .into_iter()
+    .flat_map(|x| json_to_video(x))
     .collect();
