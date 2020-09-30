@@ -24,5 +24,6 @@ astyledMessage =
     [ text "Hello!"
     ]
 
+main : Html msg
 main =
   astyledMessage
